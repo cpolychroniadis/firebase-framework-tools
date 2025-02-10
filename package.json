@@ -1,6 +1,25 @@
 {
   "name": "root",
+  "version": "1.0.0",
   "private": true,
+  "description": "App Hosting provides configuration-free build and deploy support for Web apps developed in these frameworks:",
+  "homepage": "https://github.com/cpolychroniadis/firebase-framework-tools#readme",
+  "bugs": {
+    "url": "https://github.com/cpolychroniadis/firebase-framework-tools/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cpolychroniadis/firebase-framework-tools.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "workspaces": [
+    "packages/@apphosting/*",
+    "packages/create-next-on-firebase",
+    "packages/firebase-frameworks"
+  ],
   "scripts": {
     "build": "./scripts/build.js",
     "build:watch": "lerna watch -- lerna run build",
@@ -10,11 +29,6 @@
     "lint:quiet": "eslint packages/* scripts/* --quiet",
     "lint:fix": "eslint packages/* scripts/* --fix"
   },
-  "workspaces": [
-    "packages/@apphosting/*",
-    "packages/create-next-on-firebase",
-    "packages/firebase-frameworks"
-  ],
   "devDependencies": {
     "@angular-devkit/build-angular": "^17.1.2",
     "@types/mocha": "*",
